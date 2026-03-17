@@ -78,6 +78,22 @@
             align-items: baseline;
             margin-bottom: 15px;
         }
+        
+        /* Neues Flex-Layout für Logos neben dem Titel */
+        .card-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .company-logo {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            object-fit: contain;
+            background-color: #fff; /* Falls Logos transparent sind */
+            padding: 2px;
+        }
 
         .card-title {
             font-size: 1.2rem;
@@ -89,6 +105,7 @@
         .card-subtitle {
             font-size: 1rem;
             color: var(--text-muted);
+            margin: 2px 0 0 0;
         }
 
         .date-badge {
@@ -98,6 +115,7 @@
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         ul {
@@ -107,7 +125,7 @@
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .skills-grid {
@@ -129,6 +147,9 @@
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 1px;
+            border-bottom: 1px solid #2e3c56;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
         }
 
         .tag-container {
@@ -165,9 +186,11 @@
     
     <div class="card">
         <div class="card-header">
-            <div>
-                <p class="card-title">Valeo eAutomotive</p>
-                <p class="card-subtitle">Werkstudent Discipline Software (HIL IT)</p>
+            <div class="card-title-wrapper">
+                <div>
+                    <p class="card-title">Valeo eAutomotive</p>
+                    <p class="card-subtitle">Werkstudent Discipline Software (HIL IT)</p>
+                </div>
             </div>
             <div class="date-badge">07/2023 – 07/2025</div>
         </div>
@@ -180,9 +203,11 @@
 
     <div class="card">
         <div class="card-header">
-            <div>
-                <p class="card-title">Siemens AG</p>
-                <p class="card-subtitle">Werkstudent Information Technology (IT GX XS COS)</p>
+            <div class="card-title-wrapper">
+                <div>
+                    <p class="card-title">Siemens AG</p>
+                    <p class="card-subtitle">Werkstudent Information Technology (IT GX XS COS)</p>
+                </div>
             </div>
             <div class="date-badge">10/2020 – 10/2022</div>
         </div>
@@ -193,21 +218,23 @@
         </ul>
     </div>
 
-    <h2>🖥️ Private Projekte & Homelab</h2>
+    <h2>🖥️ Homelab & Infrastruktur</h2>
 
     <div class="card">
         <div class="card-header">
-            <div>
-                <p class="card-title">Self-Hosted Infrastructure & Smart Home</p>
-                <p class="card-subtitle">System-Architektur, Virtualisierung & Sicherheit</p>
+            <div class="card-title-wrapper">
+                <div>
+                    <p class="card-title">Self-Hosted Enterprise Architecture</p>
+                    <p class="card-subtitle">System-Design, Virtualisierung & Zero-Trust Security</p>
+                </div>
             </div>
             <div class="date-badge">Laufend</div>
         </div>
         <ul>
-            <li><strong>Proxmox VE Cluster:</strong> Verwaltung und Provisionierung von LXC-Containern und virtuellen Maschinen (Linux/Ubuntu).</li>
-            <li><strong>Netzwerk & Sicherheit:</strong> Absicherung exponierter Dienste über HTTPS mit automatisierten SSL-Zertifikaten (Let's Encrypt / Nginx Proxy Manager). Einsatz von Cloudflare DNS.</li>
-            <li><strong>Smart Home (Home Assistant):</strong> Komplexe YAML-basierte Automatisierungen (Alarmo, Klimasteuerung) inklusive Gemini-KI-Integration zur Auswertung von Sensorik. Dezentrales Zigbee/Z-Wave-Gateway (Raspberry Pi).</li>
-            <li><strong>Dienste & Docker:</strong> Hosting und Wartung produktiver Stacks wie Paperless-ngx, Vaultwarden, InfluxDB und MQTT-Broker.</li>
+            <li><strong>Enterprise-Grade Virtualisierung:</strong> Konzeption und Betrieb eines hochverfügbaren Proxmox VE Clusters zur zentralen Bereitstellung von isolierten LXC-Containern und virtuellen Maschinen (Linux/Ubuntu).</li>
+            <li><strong>Netzwerkarchitektur & Zero-Trust:</strong> Vollständige Absicherung interner Dienste über Cloudflare Tunnel und Access (Zero-Trust-Policies). Automatisches SSL-Zertifikatsmanagement (Let's Encrypt) via Nginx Proxy Manager.</li>
+            <li><strong>Smart Home Operations:</strong> Entwicklung komplexer, YAML-basierter Automatisierungssysteme (Home Assistant) inkl. KI-Auswertung (Gemini-API) für Sensorik. Aufbau eines dezentralen, ausfallsicheren Zigbee/Z-Wave-Gateways auf Basis von Raspberry Pi.</li>
+            <li><strong>DevOps & Container-Orchestrierung:</strong> Eigenverantwortliches Hosting und Wartung produktionskritischer Stacks (Paperless-ngx, Vaultwarden, InfluxDB, MQTT-Broker) mit starkem Fokus auf Datensicherheit und Backups.</li>
         </ul>
     </div>
 
@@ -215,11 +242,13 @@
 
     <div class="card">
         <div class="card-header">
-            <div>
-                <p class="card-title">FAU Erlangen-Nürnberg</p>
-                <p class="card-subtitle">B.Sc. Informations- und Kommunikationstechnik (IuK)</p>
+            <div class="card-title-wrapper">
+                <div>
+                    <p class="card-title">FAU Erlangen-Nürnberg</p>
+                    <p class="card-subtitle">B.Sc. Informations- und Kommunikationstechnik (IuK)</p>
+                </div>
             </div>
-            <div class="date-badge">Seit SS 2025</div>
+            <div class="date-badge">Seit WS 2025/26</div>
         </div>
         <ul>
             <li>Fokus auf Netzwerksysteme, Infrastruktur und Nachrichtentechnik.</li>
@@ -228,11 +257,13 @@
 
     <div class="card">
         <div class="card-header">
-            <div>
-                <p class="card-title">FAU Erlangen-Nürnberg</p>
-                <p class="card-subtitle">B.Sc. Informatik (Fachwechsel)</p>
+            <div class="card-title-wrapper">
+                <div>
+                    <p class="card-title">FAU Erlangen-Nürnberg</p>
+                    <p class="card-subtitle">B.Sc. Informatik (Fachwechsel)</p>
+                </div>
             </div>
-            <div class="date-badge">10/2021 – 03/2025</div>
+            <div class="date-badge">10/2021 – SS 2025</div>
         </div>
         <ul>
             <li>Grundlagen der Informatik, Java-Programmierung, Algorithmen und Datenstrukturen.</li>
@@ -242,9 +273,11 @@
 
     <div class="card">
         <div class="card-header">
-            <div>
-                <p class="card-title">Helene-Lange-Gymnasium Fürth</p>
-                <p class="card-subtitle">Allgemeine Hochschulreife (Abitur)</p>
+            <div class="card-title-wrapper">
+                <div>
+                    <p class="card-title">Helene-Lange-Gymnasium Fürth</p>
+                    <p class="card-subtitle">Allgemeine Hochschulreife (Abitur)</p>
+                </div>
             </div>
             <div class="date-badge">09/2012 – 07/2020</div>
         </div>
@@ -254,13 +287,13 @@
     
     <div class="skills-grid">
         <div class="skill-box">
-            <h3>Systeme & Plattformen</h3>
+            <h3>Infrastruktur & Plattformen</h3>
             <div class="tag-container">
                 <span class="tag">Proxmox VE</span>
                 <span class="tag">Linux (Debian/Ubuntu)</span>
                 <span class="tag">Docker & LXC</span>
+                <span class="tag">Cloudflare (Access/DNS)</span>
                 <span class="tag">Home Assistant</span>
-                <span class="tag">Cloudflare</span>
             </div>
         </div>
         
@@ -284,18 +317,18 @@
         </div>
 
         <div class="skill-box">
-            <h3>Tools & Netzwerk</h3>
+            <h3>Netzwerk & Tools</h3>
             <div class="tag-container">
                 <span class="tag">Nginx Proxy Manager</span>
                 <span class="tag">Git & GitHub</span>
-                <span class="tag">HTTPS / SSL</span>
+                <span class="tag">HTTPS / SSL / Zero-Trust</span>
                 <span class="tag">MQTT / InfluxDB</span>
                 <span class="tag">Z-Wave & Zigbee</span>
             </div>
         </div>
 
         <div class="skill-box">
-            <h3>Systeme & Methoden</h3>
+            <h3>Methoden & Prozesse</h3>
             <div class="tag-container">
                 <span class="tag">Agile Methoden</span>
                 <span class="tag">Prozessoptimierung</span>
