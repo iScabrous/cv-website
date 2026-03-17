@@ -3,93 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebenslauf | Nico</title>
+    <title>Portfolio | Nico Bührig</title>
     <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #151b2b;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-primary: #8b5cf6;
+            --accent-secondary: #06b6d4;
+            --gradient: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f9;
-        }
-        .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #3498db;
-            margin-top: 30px;
-        }
-        .contact-info {
-            margin-bottom: 30px;
-            color: #7f8c8d;
-        }
-        .job, .education {
-            margin-bottom: 20px;
-        }
-        .job h3, .education h3 {
             margin: 0;
-            color: #2c3e50;
+            padding: 40px 20px;
         }
-        .date {
-            font-style: italic;
-            color: #7f8c8d;
-            font-size: 0.9em;
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
         }
-        .skills-list {
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0 0 10px 0;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 1px solid #2e3c56;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #2e3c56;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-primary);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-secondary);
+            margin: 0;
+        }
+
+        .card-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .date-badge {
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent-secondary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-box {
+            background-color: var(--card-bg);
+            border: 1px solid #2e3c56;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .skill-box h3 {
+            margin-top: 0;
+            font-size: 1rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tag-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            padding: 0;
-            list-style: none;
         }
-        .skills-list li {
-            background-color: #ecf0f1;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
+
+        .tag {
+            background-color: rgba(139, 92, 246, 0.1);
+            color: #a78bfa;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .tag.green {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.3);
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Nico</h1>
-    <div class="contact-info">
-        IT-Enthusiast | Homelabber | System-Architekt<br>
-        Email: mail@nico-core.de | Website: nico-core.de
-    </div>
+    <header>
+        <h1>Nico Bührig</h1>
+        <p class="subtitle">IT-Infrastruktur | Werkstudent | Homelab-Enthusiast</p>
+    </header>
 
-    <h2>Profil</h2>
-    <p>Leidenschaftlicher Tech-Nerd mit starkem Fokus auf Virtualisierung (Proxmox), Smart Home Automatisierung (Home Assistant) und sichere Netzwerkarchitekturen. Immer auf der Suche nach dem nächsten Optimierungspotenzial.</p>
-
-    <h2>Berufserfahrung</h2>
-    <div class="job">
-        <h3>Systemadministrator</h3>
-        <span class="date">Januar 2022 - Heute</span>
+    <h2>💼 Arbeitserfahrung</h2>
+    
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <p class="card-title">Valeo eAutomotive</p>
+                <p class="card-subtitle">Werkstudent Research & Development / HIL IT</p>
+            </div>
+            <div class="date-badge">08/2023 – Heute</div>
+        </div>
         <ul>
-            <li>Verwaltung und Optimierung komplexer Server-Infrastrukturen</li>
-            <li>Implementierung von Reverse-Proxy-Lösungen und Cloudflare-Sicherheit</li>
+            <li>Unterstützung des internen Software-Testcenters durch Automatisierung und Standardisierung.</li>
+            <li>Infrastrukturpflege und Entwicklung im Bereich Software Testing.</li>
+            <li>Web-Entwicklung (HTML/CSS) und Tool-Anpassungen.</li>
         </ul>
     </div>
 
-    <h2>Fähigkeiten & Tech-Stack</h2>
-    <ul class="skills-list">
-        <li>Proxmox VE</li>
-        <li>Home Assistant</li>
-        <li>Docker & LXC</li>
-        <li>Netzwerksicherheit (NPM, Cloudflare)</li>
-        <li>Linux (Ubuntu, Debian)</li>
-    </ul>
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <p class="card-title">Siemens AG</p>
+                <p class="card-subtitle">Werkstudent IT (SOP IT)</p>
+            </div>
+            <div class="date-badge">10/2020 – 11/2022</div>
+        </div>
+        <ul>
+            <li>Unterstützung im IT-Projektmanagement und der Systemadministration.</li>
+            <li>Prozessoptimierung und Einsatz von Microsoft Office Lösungen.</li>
+        </ul>
+    </div>
+
+    <h2>🖥️ Private Projekte & Homelab</h2>
+
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <p class="card-title">Self-Hosted Infrastructure & Smart Home</p>
+                <p class="card-subtitle">System-Architektur, Virtualisierung & Netzwerk</p>
+            </div>
+            <div class="date-badge">Laufend</div>
+        </div>
+        <ul>
+            <li><strong>Proxmox VE Cluster:</strong> Verwaltung und Provisionierung von LXC-Containern und virtuellen Maschinen (Linux/Ubuntu).</li>
+            <li><strong>Smart Home (Home Assistant):</strong> Komplexe YAML-basierte Automatisierungen (Alarmo, Klimasteuerung) inklusive Gemini-KI-Integration zur Auswertung von Sensorik.</li>
+            <li><strong>Netzwerk & Sicherheit:</strong> Dezentrales Zigbee/Z-Wave-Gateway (Raspberry Pi), Nginx Proxy Manager (NPM), Cloudflare DNS & Tunneling, Let's Encrypt SSL-Zertifikate.</li>
+            <li><strong>Dienste & Docker:</strong> Paperless-ngx, Vaultwarden, InfluxDB, MQTT-Broker.</li>
+        </ul>
+    </div>
+
+    <h2>🎓 Bildungsweg</h2>
+
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <p class="card-title">FAU Erlangen-Nürnberg</p>
+                <p class="card-subtitle">B.Sc. Informations- und Kommunikationstechnik (IuK)</p>
+            </div>
+            <div class="date-badge">Seit SS 2025</div>
+        </div>
+        <ul>
+            <li>Fokus auf Netzwerksysteme, Infrastruktur und Nachrichtentechnik.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <p class="card-title">FAU Erlangen-Nürnberg</p>
+                <p class="card-subtitle">B.Sc. Informatik (Fachwechsel)</p>
+            </div>
+            <div class="date-badge">10/2021 – 03/2025</div>
+        </div>
+        <ul>
+            <li>Grundlagen der Informatik, Java-Programmierung, Algorithmen und Datenstrukturen.</li>
+            <li>Digitalschaltungen und Hardwarenahe Programmierung (VHDL, Assembler).</li>
+        </ul>
+    </div>
+
+    <h2>⚙️ Technologien & Kompetenzen</h2>
+    
+    <div class="skills-grid">
+        <div class="skill-box">
+            <h3>Systeme & Plattformen</h3>
+            <div class="tag-container">
+                <span class="tag">Proxmox VE</span>
+                <span class="tag">Linux (Debian/Ubuntu)</span>
+                <span class="tag">Docker & LXC</span>
+                <span class="tag">Home Assistant</span>
+                <span class="tag">Cloudflare</span>
+            </div>
+        </div>
+        
+        <div class="skill-box">
+            <h3>Programmierung</h3>
+            <div class="tag-container">
+                <span class="tag green">Python</span>
+                <span class="tag green">Java</span>
+                <span class="tag green">HTML/CSS/JS</span>
+                <span class="tag green">SQL</span>
+                <span class="tag green">YAML</span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3>Tools & Netzwerk</h3>
+            <div class="tag-container">
+                <span class="tag">Nginx Proxy Manager</span>
+                <span class="tag">Git & GitHub</span>
+                <span class="tag">MQTT / InfluxDB</span>
+                <span class="tag">Z-Wave & Zigbee</span>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 </body>
