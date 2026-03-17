@@ -31,6 +31,7 @@ h1 {
     margin: 0 0 10px 0;
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -165,3 +166,46 @@ li {
     color: #34d399;
     border-color: rgba(16, 185, 129, 0.3);
 }
+/* Footer Styles */
+footer {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid #2e3c56;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-location {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.footer-right {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color
