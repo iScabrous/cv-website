@@ -208,5 +208,17 @@ footer {
     color: var(--text-muted);
     text-decoration: none;
     font-size: 0.95rem;
-    transition: color
+    transition: color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-link:hover {
+    color: var(--accent-secondary);
+}
+
+.footer-link svg {
+    width: 18px;
+    height: 18px;
 }
