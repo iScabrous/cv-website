@@ -232,12 +232,10 @@ footer {
 }
 
 /* Spezielle Klasse für kompakte Praktikums-Beschreibungen */
-.card-description-compact {
-    padding-left: 60px; /* Exakte Ausrichtung unter dem Textanfang der Siemens-Punkte */
+.card-description-simple {
+    padding-left: 80px; /* Exakte Fluchtlinie mit dem Siemens-Text */
     margin-top: 10px;
-    font-size: 0.92rem; /* Etwas kleiner als Standard für die Hierarchie */
-    color: var(--text-muted); /* Gleiche Farbe wie Siemens-Untertitel */
+    font-size: 0.95rem; /* Dezent kleiner */
+    color: var(--text-muted);
     line-height: 1.5;
-    border-left: 2px solid rgba(6, 182, 212, 0.2); /* Dezenter vertikaler Strich für Struktur */
-    margin-left: 22px; /* Positioniert den Strich mittig unter dem Logo */
 }
