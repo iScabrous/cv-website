@@ -233,7 +233,6 @@ footer {
 
 /* Spezielle Klasse für kompakte Praktikums-Beschreibungen */
 .card-description-simple {
-    padding-left: 80px; /* Exakte Fluchtlinie mit dem Siemens-Text */
     margin-top: 10px;
     font-size: 0.95rem; /* Dezent kleiner */
     color: var(--text-muted);
