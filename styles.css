@@ -222,3 +222,11 @@ footer {
     width: 18px;
     height: 18px;
 }
+
+.status-badge {
+    height: 22px;
+    vertical-align: text-bottom;
+    margin-left: 10px;
+    border-radius: 4px;
+    border: none;
+}
