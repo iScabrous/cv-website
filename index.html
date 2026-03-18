@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Nico Bührig</title>
+    
+    <title>Nico Bührig | IT-Infrastruktur & Homelab</title>
+    <meta name="description" content="Portfolio und Lebenslauf von Nico Bührig. Fokus auf IT-Infrastruktur, System-Design, Virtualisierung (Proxmox), Cloudflare Zero-Trust und Smart Home Automatisierung.">
+    <meta name="author" content="Nico Bührig">
+    <meta name="theme-color" content="#0b0f19">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cv.nico-core.de/">
+    <meta property="og:title" content="Nico Bührig | IT-Infrastruktur Portfolio">
+    <meta property="og:description" content="Werkstudent und System-Enthusiast mit Fokus auf Proxmox-Virtualisierung, DevOps und Zero-Trust Security.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -58,17 +67,18 @@
         <div class="card-header">
             <div class="card-title-wrapper">
                 <div>
-                    <p class="card-title">Self-Hosted Enterprise Architecture</p>
-                    <p class="card-subtitle">System-Design, Virtualisierung & Zero-Trust Security</p>
+                    <p class="card-title">Advanced Homelab Architecture</p>
+                    <p class="card-subtitle">System-Design, Virtualisierung & DevOps</p>
                 </div>
             </div>
             <div class="date-badge">Laufend</div>
         </div>
         <ul>
-            <li><strong>Enterprise-Grade Virtualisierung:</strong> Konzeption und Betrieb eines hochverfügbaren Proxmox VE Clusters zur zentralen Bereitstellung von isolierten LXC-Containern und virtuellen Maschinen (Linux/Ubuntu).</li>
-            <li><strong>Netzwerkarchitektur & Zero-Trust:</strong> Vollständige Absicherung interner Dienste über Cloudflare Tunnel und Access (Zero-Trust-Policies). Automatisches SSL-Zertifikatsmanagement (Let's Encrypt) via Nginx Proxy Manager.</li>
-            <li><strong>Smart Home Operations:</strong> Entwicklung komplexer, YAML-basierter Automatisierungssysteme (Home Assistant) inkl. KI-Auswertung (Gemini-API) für Sensorik. Aufbau eines dezentralen, ausfallsicheren Zigbee/Z-Wave-Gateways auf Basis von Raspberry Pi.</li>
-            <li><strong>DevOps & Container-Orchestrierung:</strong> Eigenverantwortliches Hosting und Wartung produktionskritischer Stacks (Paperless-ngx, Vaultwarden, InfluxDB, MQTT-Broker) mit starkem Fokus auf Datensicherheit und Backups.</li>
+            <li><strong>Infrastruktur & IaC:</strong> Konzeption und Betrieb eines Proxmox VE Clusters mit isolierten LXC-Containern (Micro-Segmentation). Vollständige Versionierung aller Docker-Compose-Stacks in Git.</li>
+            <li><strong>DevOps & Automatisierung:</strong> Entwicklung globaler Shell-Skripte zur dynamischen, hostweiten Aktualisierung von OS-Paketen (Debian/Alpine) und Docker-Containern über alle LXC-Nodes hinweg.</li>
+            <li><strong>Netzwerk & Zero-Trust:</strong> Absicherung des Ingress-Traffics durch Cloudflare WAF und Tunnel. Internes Routing und SSL-Management via Nginx Proxy Manager sowie netzwerkweites DNS-Filtering (AdGuard).</li>
+            <li><strong>Security & Disaster Recovery:</strong> Etabliertes Disaster-Recovery-Runbook. Verschlüsselte Offsite-Backups sensibler Container-Daten (Vaultwarden, Paperless) via Rclone (Google Drive) kombiniert mit lokalen Proxmox-Snapshots.</li>
+            <li><strong>Smart Home Operations:</strong> Komplexe YAML-basierte Automatisierung (Home Assistant) inkl. Gemini-KI-Auswertung für Raumklima. Dezentrales Zigbee/Z-Wave-Gateway auf Raspberry Pi via MQTT.</li>
         </ul>
     </div>
 
