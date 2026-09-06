@@ -97,17 +97,17 @@
                             <img src="https://kuma.nico-core.de/api/badge/12/status?style=for-the-badge" alt="Lab Status" class="status-badge">
                         </a>
                     </p>
-                    <p class="card-subtitle">System-Design, Virtualisierung & Hardware-Optimierung</p>
+                    <p class="card-subtitle">Virtualisierung, GitOps & System-Architektur</p>
                 </div>
             </div>
             <div class="date-badge">Laufend</div>
         </div>
         <ul>
-            <li><strong>Infrastruktur & Hardware:</strong> Konzeption und Assemblierung spezialisierter Hardware-Systeme (Custom Builds). Erfahrung mit thermischer Optimierung (Wasserkühlung) sowie Performance-Tuning und Stabilitäts-Validierung (Overclocking/Undervolting) von System-Komponenten.</li>
-            <li><strong>Virtualisierung & IaC:</strong> Betrieb eines Proxmox VE Clusters mit isolierten LXC-Containern (Micro-Segmentation). Vollständige Versionierung aller Docker-Compose-Stacks in Git.</li>
-            <li><strong>DevOps & Automatisierung:</strong> Entwicklung globaler Shell-Skripte zur dynamischen Aktualisierung von OS-Paketen und Containern über die gesamte Infrastruktur hinweg.</li>
-            <li><strong>Security & Disaster Recovery:</strong> Absicherung via Cloudflare Zero-Trust. Implementierung eines Disaster-Recovery-Runbooks mit verschlüsselten Offsite-Backups via Rclone.</li>
-            <li><strong>Smart Home Operations:</strong> Komplexe YAML-Automatisierung (Home Assistant) inkl. KI-Auswertung für Sensorik und dezentralem Zigbee/Zwave-Gateway via MQTTS/WS sowie externer Cloud- & Sprach-Integration (AWS Lambda / API).</li>
+            <li><strong>Virtualisierung & Micro-Segmentierung:</strong> Betrieb isolierter LXC-Container auf Proxmox VE mit strikter PVE-Firewall (dedizierte Security Groups für WebApp, Infra und CI/CD). Vollständige GitOps-Versionierung aller Stacks.</li>
+            <li><strong>GitOps CI/CD & Automatisierung:</strong> Vollautomatisierte Deployment-Pipeline via GitHub Actions und isolierten Self-Hosted Runner (CT 115). Secret-Scanning (TruffleHog), Concurrency-Locks und globale Host-Wartungsskripte.</li>
+            <li><strong>Security & Disaster Recovery:</strong> Zero-Trust Ingress via Cloudflare Tunnel und Nginx Proxy Manager. Ausführliches Disaster-Recovery-Konzept mit verschlüsselten Offsite-Backups via Rclone (Crypt auf Google Drive).</li>
+            <li><strong>Smart Home & Edge Gateway:</strong> Komplexe Home-Assistant-Architektur mit autarkem Raspberry Pi als Edge-Gateway (Zigbee & Z-Wave via MQTTS), SD-Karten-Flash-Schutz (Wear-Leveling) und Hardware-Sentinel.</li>
+            <li><strong>Hardware-Basis & Assemblierung:</strong> Eigenständige Konzeption, Assemblierung und Wartung der System-Hardware (Custom Builds), thermische Optimierung und praktische Fehleranalyse.</li>
         </ul>
     </div>
 
@@ -128,8 +128,7 @@
             <li>Fokus auf Netzwerksysteme, Infrastruktur und Nachrichtentechnik.</li>
         </ul>
     </div>
-
-<div class="card">
+    <div class="card">
         <div class="card-header">
             <div class="card-title-wrapper">
                 <img src="FAU-Logo.png" alt="FAU Logo" class="company-logo">
@@ -173,10 +172,10 @@
                 <span class="tag">Docker & LXC</span>
                 <span class="tag">Cloudflare (Access/DNS)</span>
                 <span class="tag">Home Assistant</span>
-                <span class="tag">Hardware Tuning</span>
-                <span class="tag">Performance Optimization</span>
-                <span class="tag">Liquid Cooling Systems</span>
-                <span class="tag">System Stability Testing</span>
+                <span class="tag">Proxmox Firewall</span>
+                <span class="tag">Hardware-Assemblierung</span>
+                <span class="tag">Hardware-Fehleranalyse</span>
+                <span class="tag">Kühlkonzepte (AiO)</span>
             </div>
         </div>
         
@@ -202,6 +201,7 @@
         <div class="skill-box">
             <h3>Netzwerk & Tools</h3>
             <div class="tag-container">
+                <span class="tag">CI/CD (GitHub Actions)</span>
                 <span class="tag">Nginx Proxy Manager</span>
                 <span class="tag">Git & GitHub</span>
                 <span class="tag">HTTPS / SSL / Zero-Trust</span>
