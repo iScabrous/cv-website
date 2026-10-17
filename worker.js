@@ -9,6 +9,7 @@ export default {
           headers: {
             "User-Agent": "Cloudflare-Worker-Badge-Proxy"
           },
+          signal: AbortSignal.timeout(3500),
           cf: {
             cacheTtl: 60,
             cacheEverything: true
@@ -17,13 +18,15 @@ export default {
 
         if (response.ok) {
           const svg = await response.text();
-          return new Response(svg, {
-            headers: {
-              "Content-Type": "image/svg+xml; charset=utf-8",
-              "Cache-Control": "public, max-age=60, s-maxage=60",
-              "Access-Control-Allow-Origin": "*"
-            }
-          });
+          if (svg.includes("<svg")) {
+            return new Response(svg, {
+              headers: {
+                "Content-Type": "image/svg+xml; charset=utf-8",
+                "Cache-Control": "public, max-age=60, s-maxage=60",
+                "Access-Control-Allow-Origin": "*"
+              }
+            });
+          }
         }
       } catch (e) {
         // Fallback on network/fetch error
